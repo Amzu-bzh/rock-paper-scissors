@@ -3,8 +3,8 @@
 
 #include <iostream>
 
-int mainMenu();
+int mainScreen();
 
-void rulesMenu();
+void rulesScreen();
 
 #endif /* menu_h */
