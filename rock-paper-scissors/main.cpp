@@ -11,14 +11,14 @@ int main()
 
 	while (play)
 	{
-		switch (mainMenu())
+		switch (mainScreen())
 		{
 		case 1:
-			gameLoop();
+			runGame();
 			break;
 
 		case 2:
-			rulesMenu();
+			rulesScreen();
 			break;
 
 		case 3:
