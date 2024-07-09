@@ -1,6 +1,22 @@
-#include "game.hpp"
+/// \file		Game.cpp
+/// \author		@Amzu-bzh
+/// \project	rock-paper-scissors
 
-void runGame()
+#include "Game.hpp"
+
+Game::Game()
+{
+	// std::cout << "Construction of the Game: " << this << std::endl;
+	// system("pause");
+}
+
+Game::~Game()
+{
+	// std::cout << "Destruction of the Game: " << this << std::endl;
+	// system("pause");
+}
+
+void Game::runGame()
 {
 	int score[2];
 	score[0] = 0;
@@ -25,7 +41,7 @@ void runGame()
 	system("pause");
 }
 
-void gameLoop(int score[])
+void Game::gameLoop(int score[])
 {
 	int answer(0), choice(0);
 
@@ -48,7 +64,7 @@ void gameLoop(int score[])
 	}
 }
 
-void analyzeResult(int answer, int choice, int score[])
+void Game::analyzeResult(int answer, int choice, int score[])
 {
 	int result(0);
 
@@ -77,7 +93,7 @@ void analyzeResult(int answer, int choice, int score[])
 	updateScore(result, score);
 }
 
-int compare(int lose, int win, int answer)
+int Game::compare(int lose, int win, int answer)
 {
 	if (answer == win)
 	{
@@ -93,7 +109,7 @@ int compare(int lose, int win, int answer)
 	}
 }
 
-void updateScore(int result, int score[])
+void Game::updateScore(int result, int score[])
 {
 	switch (result)
 	{
@@ -116,7 +132,7 @@ void updateScore(int result, int score[])
 	}
 }
 
-int generateNumber()
+int Game::generateNumber()
 {
 	int answer = (rand() % (3 - 1 + 1)) + 1;
 

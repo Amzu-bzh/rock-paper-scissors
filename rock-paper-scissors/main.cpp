@@ -5,7 +5,7 @@
 #include <iostream>
 
 #include "Menu.hpp"
-#include "game.hpp"
+#include "Game.hpp"
 
 using namespace std;
 
@@ -14,13 +14,14 @@ int main()
 	bool play(true);
 
 	Menu gameMenu;
+	Game game;
 
 	while (play)
 	{
 		switch (gameMenu.mainScreen())
 		{
 		case 1:
-			runGame();
+			game.runGame();
 			break;
 
 		case 2:
