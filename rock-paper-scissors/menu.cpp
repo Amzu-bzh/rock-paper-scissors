@@ -1,6 +1,22 @@
-#include "menu.hpp"
+/// \file		Menu.cpp
+/// \author		@Amzu-bzh
+/// \project	rock-paper-scissors
 
-int mainScreen()
+#include "Menu.hpp"
+
+Menu::Menu()
+{
+	// std::cout << "Construction of the Menu : " << this << std::endl;
+	// system("pause");
+}
+
+Menu::~Menu()
+{
+	// std::cout << "Destruction of the Menu : " << this << std::endl;
+	// system("pause");
+}
+
+int Menu::mainScreen()
 {
 	system("cls");
 
@@ -14,7 +30,7 @@ int mainScreen()
 	return choice;
 }
 
-void rulesScreen()
+void Menu::rulesScreen()
 {
 	system("cls");
 

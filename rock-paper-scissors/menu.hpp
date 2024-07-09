@@ -1,10 +1,20 @@
+/// \file		Menu.hpp
+/// \author		@Amzu-bzh
+/// \project	rock-paper-scissors
+
 #ifndef menu_h
 #define menu_h
 
 #include <iostream>
 
-int mainScreen();
+class Menu
+{
+public:
+	Menu();
+	~Menu();
 
-void rulesScreen();
+	int mainScreen();
+	void rulesScreen();
+};
 
 #endif /* menu_h */
