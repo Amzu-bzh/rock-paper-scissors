@@ -14,11 +14,11 @@
 #include "Game.hpp"
 #include "Settings.hpp"
 
-class Display
+class TranslateSystem
 {
 public:
-	Display(Menu *menu, Game *game, Settings *settings);
-	~Display();
+	TranslateSystem(Menu *menu, Game *game, Settings *settings);
+	~TranslateSystem();
 
 	Json::Value general;
 	Json::Value settings;

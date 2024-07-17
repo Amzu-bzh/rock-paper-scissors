@@ -2,9 +2,9 @@
 /// \author		@Amzu-bzh
 /// \project	rock-paper-scissors
 
-#include "Display.hpp"
+#include "TranslateSystem.hpp"
 
-Display::Display(Menu *menu, Game* game, Settings* settings)
+TranslateSystem::TranslateSystem(Menu *menu, Game* game, Settings* settings)
 {
 	p_menu = menu;
 	p_game = game;
@@ -16,13 +16,13 @@ Display::Display(Menu *menu, Game* game, Settings* settings)
 	// system("pause");
 }
 
-Display::~Display()
+TranslateSystem::~TranslateSystem()
 {
 	// std::cout << "Destruction of the Display class : " << this << std::endl;
 	// system("pause");
 }
 
-void Display::changeLanguage()
+void TranslateSystem::changeLanguage()
 {
 	settingsFile.open("settings.json");
 	reader.parse(settingsFile, settings);
@@ -32,7 +32,7 @@ void Display::changeLanguage()
 
 }
 
-void Display::parseFiles(std::string language)
+void TranslateSystem::parseFiles(std::string language)
 {
 	p_menu->text.clear();
 	p_game->text.clear();

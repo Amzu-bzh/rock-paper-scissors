@@ -6,7 +6,7 @@
 #include <json/json.h>
 #include <fstream>
 
-#include "Display.hpp"
+#include "TranslateSystem.hpp"
 #include "Menu.hpp"
 #include "Game.hpp"
 #include "Settings.hpp"
@@ -20,7 +20,7 @@ int main()
 	Menu menu;
 	Game game;
 	Settings settings;
-	Display display(&menu, &game, &settings);
+	TranslateSystem display(&menu, &game, &settings);
 
 	while (play)
 	{
