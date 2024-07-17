@@ -17,10 +17,10 @@ int main()
 {
 	bool play(true);
 
-	Display display;
-	Menu menu(&display);
-	Game game(&display);
-	Settings settings(&display);
+	Menu menu;
+	Game game;
+	Settings settings;
+	Display display(&menu, &game, &settings);
 
 	while (play)
 	{
@@ -36,6 +36,9 @@ int main()
 
 		case 3:
 			settings.mainScreen();
+
+			display.changeLanguage();
+
 			break;
 
 		case 4:

@@ -10,27 +10,33 @@
 #include <json/json.h>
 #include <fstream>
 
+#include "Menu.hpp"
+#include "Game.hpp"
+#include "Settings.hpp"
+
 class Display
 {
 public:
-	Display();
+	Display(Menu *menu, Game *game, Settings *settings);
 	~Display();
 
 	Json::Value general;
-	Json::Value menu;
-	Json::Value game;
 	Json::Value settings;
 
-	void changeLanguage(int language);
+	void changeLanguage();
 
 private:
 	void parseFiles(std::string language);
 
-	std::ifstream language_file;
+	std::ifstream settingsFile;
+	std::ifstream languageFile;
 	Json::Reader reader;
 
 	std::string fileDirectory;
-	std::string files[4] = { "general/", "menu/", "game/", "settings/" };
+
+	Menu* p_menu;
+	Game* p_game;
+	Settings* p_settings;
 };
 
 #endif // !display_hpp

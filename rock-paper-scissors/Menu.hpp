@@ -9,19 +9,18 @@
 
 #include <json/json.h>
 
-#include "Display.hpp"
-
 class Menu
 {
 public:
-	Menu(Display *display);
+	Menu();
 	~Menu();
 
 	int mainScreen();
 	void rulesScreen();
 
+	Json::Value text;
+
 private:
-	Display* m_display;
 };
 
 #endif /* menu_h */

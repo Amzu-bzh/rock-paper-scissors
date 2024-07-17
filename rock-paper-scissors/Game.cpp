@@ -4,10 +4,8 @@
 
 #include "Game.hpp"
 
-Game::Game(Display *display)
+Game::Game()
 {
-	g_display = display;
-
 	// std::cout << "Construction of the Game: " << this << std::endl;
 	// system("pause");
 }
@@ -28,17 +26,17 @@ void Game::runGame()
 
 	system("cls");
 
-	std::cout << g_display->general["title"].asString() << std::endl;
+	std::cout << text["title"].asString() << std::endl;
 
 	displayScore(score);
 
 	if (score[0] == 3)
 	{
-		std::cout << g_display->game["win_game"].asString() << std::endl;
+		std::cout << text["win_game"].asString() << std::endl;
 	}
 	else
 	{
-		std::cout << g_display->game["lose_game"].asString() << std::endl;
+		std::cout << text["lose_game"].asString() << std::endl;
 	}
 
 	system("pause");
@@ -54,11 +52,11 @@ void Game::gameLoop(int score[])
 
 		system("cls");
 
-		std::cout << g_display->general["title"].asString() << std::endl;
+		std::cout << text["title"].asString() << std::endl;
 
 		displayScore(score);
 
-		std::cout << g_display->game["choice"].asString();
+		std::cout << text["choice"].asString();
 
 		std::cin >> choice;
 
@@ -118,17 +116,17 @@ void Game::updateScore(int result, int score[])
 	switch (result)
 	{
 	case 1:
-		std::cout << g_display->game["win_round"].asString() << std::endl;
+		std::cout << text["win_round"].asString() << std::endl;
 		score[0] += 1;
 		break;
 
 	case 2:
-		std::cout << g_display->game["lose_round"].asString() << std::endl;
+		std::cout << text["lose_round"].asString() << std::endl;
 		score[1] += 1;
 		break;
 
 	case 3:
-		std::cout << g_display->game["tie_round"].asString() << std::endl;
+		std::cout << text["tie_round"].asString() << std::endl;
 		break;
 
 	default:
@@ -145,6 +143,6 @@ int Game::generateNumber()
 
 void Game::displayScore(int score[])
 {
-	std::cout << g_display->game["you_score"].asString() << score[0] << std::endl;
-	std::cout << g_display->game["bot_score"].asString() << score[1] << std::endl;
+	std::cout << text["you_score"].asString() << score[0] << std::endl;
+	std::cout << text["bot_score"].asString() << score[1] << std::endl;
 }

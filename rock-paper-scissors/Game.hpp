@@ -7,15 +7,17 @@
 
 #include <iostream>
 
-#include "Display.hpp"
+#include <json/json.h>
 
 class Game
 {
 public :
-	Game(Display *display);
+	Game();
 	~Game();
 
 	void runGame();
+
+	Json::Value text;
 
 private :
 	void gameLoop(int score[]);
@@ -28,8 +30,6 @@ private :
 	int generateNumber();
 
 	void displayScore(int score[]);
-
-	Display* g_display;
 };
 
 #endif /* game_h */

@@ -4,9 +4,13 @@
 
 #include "Display.hpp"
 
-Display::Display()
+Display::Display(Menu *menu, Game* game, Settings* settings)
 {
-	changeLanguage(2);
+	p_menu = menu;
+	p_game = game;
+	p_settings = settings;
+
+	changeLanguage();
 
 	// std::cout << "Construction of the Display class : " << this << std::endl;
 	// system("pause");
@@ -18,61 +22,29 @@ Display::~Display()
 	// system("pause");
 }
 
-void Display::changeLanguage(int language)
+void Display::changeLanguage()
 {
-	switch (language)
-	{
-	case 1:
-		parseFiles("english");
-		break;
+	settingsFile.open("settings.json");
+	reader.parse(settingsFile, settings);
+	settingsFile.close();
 
-	case 2:
-		parseFiles("french");
+	parseFiles(settings["language"].asString());
 
-	default:
-		break;
-	}
 }
 
 void Display::parseFiles(std::string language)
 {
-	general.clear();
-	menu.clear();
-	game.clear();
-	settings.clear();
+	p_menu->text.clear();
+	p_game->text.clear();
+	p_settings->text.clear();
 
-	for (int i = 0; i < 4; i++)
-	{
-		fileDirectory = "translate/" + files[i] + language + ".json";
+	fileDirectory = "translate/" + language + ".json";
 
-		switch (i)
-		{
-		case 0:
-			language_file.open(fileDirectory);
-			reader.parse(language_file, general);
-			language_file.close();
-			break;
+	languageFile.open(fileDirectory);
+	reader.parse(languageFile, general);
+	languageFile.close();
 
-		case 1:
-			language_file.open(fileDirectory);
-			reader.parse(language_file, menu);
-			language_file.close();
-			break;
-
-		case 2:
-			language_file.open(fileDirectory);
-			reader.parse(language_file, game);
-			language_file.close();
-			break;
-
-		case 3:
-			language_file.open(fileDirectory);
-			reader.parse(language_file, settings);
-			language_file.close();
-			break;
-
-		default:
-			break;
-		}
-	}
+	p_menu->text = general["menu"];
+	p_game->text = general["game"];
+	p_settings->text = general["settings"];
 }

@@ -7,20 +7,30 @@
 
 #include <iostream>
 
-#include "Display.hpp"
+#include <json/json.h>
+#include <fstream>
 
 class Settings
 {
 public:
-	Settings(Display *display);
+	Settings();
 	~Settings();
 
 	int mainScreen();
 
+	Json::Value text;
+	Json::Value settings;
+
 private:
 	void languageScreen();
 
-	Display* s_display;
+	std::ifstream iSettingsFile;
+	std::ofstream oSettingsFile;
+
+	std::string settingsFileContent;
+
+	Json::StyledWriter writer;
+	Json::Reader reader;
 };
 
 #endif // !settings_hpp

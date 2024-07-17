@@ -4,10 +4,8 @@
 
 #include "Settings.hpp"
 
-Settings::Settings(Display *display)
+Settings::Settings()
 {
-	s_display = display;
-
 	// std::cout << "Construction of the Setings class : " << this << std::endl;
 	// system("pause");
 }
@@ -22,9 +20,9 @@ int Settings::mainScreen()
 {
 	system("cls");
 
-	std::cout << s_display->general["title"].asString() << std::endl;
+	std::cout << text["title"].asString() << std::endl;
 
-	std::cout << s_display->settings["main"].asString();
+	std::cout << text["main"].asString();
 
 	int choice; std::cin >> choice;
 
@@ -48,13 +46,32 @@ void Settings::languageScreen()
 {
 	system("cls");
 
-	std::cout << s_display->general["title"].asString() << std::endl;
+	std::cout << text["title"].asString() << std::endl;
 
-	std::cout << s_display->settings["language"].asString();
+	std::cout << text["language"].asString();
 
 	int choice; std::cin >> choice;
 
-	s_display->changeLanguage(choice);
+	iSettingsFile.open("settings.json");
+	reader.parse(iSettingsFile, settings);
+	iSettingsFile.close();
 
-	mainScreen();
+	switch (choice)
+	{
+	case 1:
+		settings["language"] = "english";
+		break;
+
+	case 2:
+		settings["language"] = "french";
+		break;
+
+	default:
+		break;
+	}
+
+	std::string settingsFileContent = writer.write(settings);
+	oSettingsFile.open("settings.json");
+	oSettingsFile << settingsFileContent;
+	oSettingsFile.close();
 }
