@@ -1,0 +1,6 @@
+{
+    "main": "1. Jouer\n2. Regles\n3. Parametres\n4. Quitter\nQuel est votre choix ? ",
+    "rules1": "Chaque tour, vous choisissez un objet (une pierre, un papier ou un ciseaux).\nVotre adversaire en choisit aussi un.\n",
+    "rules2": "Chaque objet bat un autre objet et est battu par un autre.\nSi vous avez le meme objet, il y a egalite\nLa pierre ecrase les ciseaux.\nLe papier enrobe la pierre.\nEt les ciseaux coupent le papier.\n",
+    "rules3": "Le premier a remporter trois tours gagne la partie.\n"
+}

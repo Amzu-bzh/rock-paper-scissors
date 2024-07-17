@@ -1,0 +1,10 @@
+{
+    "you_score": "Vous  : ",
+    "bot_score": "Robot : ",
+    "choice": "1. Pierre\n2. Papier\n3. Ciseaux\nQuel est votre choix ? ",
+    "win_round": "Vous avez gagne !",
+    "lose_round": "Vous avez perdu !",
+    "tie_round": "Egalite.",
+    "win_game": "Vous avez gagne la partie !",
+    "lose_game": "Vous avez perdu la partie."
+}

@@ -1,0 +1,10 @@
+{
+    "you_score": "You : ",
+    "bot_score": "Bot : ",
+    "choice": "1. Rock\n2. Paper\n3. Scissors\nWhat's your choice? ",
+    "win_round": "You win!",
+    "lose_round": "You lose!",
+    "tie_round": "It's a tie.",
+    "win_game": "You won the game!",
+    "lose_game": "You lost the game."
+}
