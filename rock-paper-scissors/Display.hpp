@@ -1,3 +1,7 @@
+/// \file		Dsiplay.hpp
+/// \author		@Amzu-bzh
+/// \project	rock-paper-scissors
+
 #ifndef display_hpp
 #define display_hpp
 

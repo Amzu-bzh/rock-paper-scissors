@@ -1,3 +1,7 @@
+/// \file		Display.cpp
+/// \author		@Amzu-bzh
+/// \project	rock-paper-scissors
+
 #include "Display.hpp"
 
 Display::Display()

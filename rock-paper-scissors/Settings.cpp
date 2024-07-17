@@ -1,3 +1,7 @@
+/// \file		Settings.cpp
+/// \author		@Amzu-bzh
+/// \project	rock-paper-scissors
+
 #include "Settings.hpp"
 
 Settings::Settings(Display *display)

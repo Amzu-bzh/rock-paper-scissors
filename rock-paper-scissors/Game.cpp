@@ -58,7 +58,7 @@ void Game::gameLoop(int score[])
 
 		displayScore(score);
 
-		std::cout << g_display->game["choice"].asString() << std::endl;
+		std::cout << g_display->game["choice"].asString();
 
 		std::cin >> choice;
 

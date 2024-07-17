@@ -1,3 +1,7 @@
+/// \file		Settings.hpp
+/// \author		@Amzu-bzh
+/// \project	rock-paper-scissors
+
 #ifndef settings_hpp
 #define settings_hpp
 
