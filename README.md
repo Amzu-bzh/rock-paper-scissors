@@ -2,6 +2,10 @@
 The Rock Paper Scissors game is one of the most famous game in the world.
 
 This is my own version with :
-    - GUI
-    - Translate system
-    - Statistic system
+
+- GUI
+- Translate system
+- Statistic system
+
+## Dependencies
+[jsoncpp](https://github.com/open-source-parsers/jsoncpp)
