@@ -1,6 +1,0 @@
-{
-    "main": "1. Play\n2. Rules\n3. Settings\n4. Exit\nWhat's your choice? ",
-    "rules1": "Every turn, you choose an object (a rock, a paper or scissors).\nYour opponent also choose one.\n",
-    "rules2": "Each object beats an object and is beaten by another.\nIf you have the same object, there is a tie.\nStone crushes scissors.\nPaper wraps stone.\nAnd scissors cut paper.\n",
-    "rules3": "The first to win three rounds wins the game.\n"
-}
