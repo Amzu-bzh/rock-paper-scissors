@@ -9,7 +9,7 @@ The purpose of this system is to allow the user to easily change the language of
 
 - [X] Get the information of each language from a `.json` file
 - [X] Display the information
-- [ ] Save the language used
+- [X] Save the language used
 
 ## Statistic system
 This system will provide information on the games played by the user, such as his winning percentage.
