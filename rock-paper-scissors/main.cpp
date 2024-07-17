@@ -13,8 +13,6 @@
 
 using namespace std;
 
-int test();
-
 int main()
 {
 	bool play(true);
