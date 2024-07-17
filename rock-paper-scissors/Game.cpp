@@ -4,8 +4,10 @@
 
 #include "Game.hpp"
 
-Game::Game()
+Game::Game(Display *display)
 {
+	g_display = display;
+
 	// std::cout << "Construction of the Game: " << this << std::endl;
 	// system("pause");
 }
@@ -26,16 +28,17 @@ void Game::runGame()
 
 	system("cls");
 
-	std::cout << "You : " << score[0] << std::endl;
-	std::cout << "Bot : " << score[1] << std::endl;
+	std::cout << g_display->general["title"].asString() << std::endl;
+
+	displayScore(score);
 
 	if (score[0] == 3)
 	{
-		std::cout << "You won the game !" << std::endl;
+		std::cout << g_display->game["win_game"].asString() << std::endl;
 	}
 	else
 	{
-		std::cout << "You lost the game." << std::endl;
+		std::cout << g_display->game["lose_game"].asString() << std::endl;
 	}
 
 	system("pause");
@@ -51,10 +54,11 @@ void Game::gameLoop(int score[])
 
 		system("cls");
 
-		std::cout << "You : " << score[0] << std::endl;
-		std::cout << "Bot : " << score[1] << std::endl;
+		std::cout << g_display->general["title"].asString() << std::endl;
 
-		std::cout << "1. Rock\n2. Paper\n3. Scissors" << std::endl << "What's your choice ? " << std::endl;
+		displayScore(score);
+
+		std::cout << g_display->game["choice"].asString() << std::endl;
 
 		std::cin >> choice;
 
@@ -114,17 +118,17 @@ void Game::updateScore(int result, int score[])
 	switch (result)
 	{
 	case 1:
-		std::cout << "You win !" << std::endl;
+		std::cout << g_display->game["win_round"].asString() << std::endl;
 		score[0] += 1;
 		break;
 
 	case 2:
-		std::cout << "You lose !" << std::endl;
+		std::cout << g_display->game["lose_round"].asString() << std::endl;
 		score[1] += 1;
 		break;
 
 	case 3:
-		std::cout << "It's a tie." << std::endl;
+		std::cout << g_display->game["tie_round"].asString() << std::endl;
 		break;
 
 	default:
@@ -137,4 +141,10 @@ int Game::generateNumber()
 	int answer = (rand() % (3 - 1 + 1)) + 1;
 
 	return answer;
+}
+
+void Game::displayScore(int score[])
+{
+	std::cout << g_display->game["you_score"].asString() << score[0] << std::endl;
+	std::cout << g_display->game["bot_score"].asString() << score[1] << std::endl;
 }

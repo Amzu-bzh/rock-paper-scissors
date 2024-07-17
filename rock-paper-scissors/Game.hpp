@@ -7,10 +7,12 @@
 
 #include <iostream>
 
+#include "Display.hpp"
+
 class Game
 {
 public :
-	Game();
+	Game(Display *display);
 	~Game();
 
 	void runGame();
@@ -24,6 +26,10 @@ private :
 	void updateScore(int result, int score[]);
 
 	int generateNumber();
+
+	void displayScore(int score[]);
+
+	Display* g_display;
 };
 
 #endif /* game_h */

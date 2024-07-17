@@ -7,14 +7,21 @@
 
 #include <iostream>
 
+#include <json/json.h>
+
+#include "Display.hpp"
+
 class Menu
 {
 public:
-	Menu();
+	Menu(Display *display);
 	~Menu();
 
 	int mainScreen();
 	void rulesScreen();
+
+private:
+	Display* m_display;
 };
 
 #endif /* menu_h */
