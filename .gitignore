@@ -35,7 +35,10 @@
 /.vs
 /x64
 /rock-paper-scissors/x64
-rock-paper-scissors.vcxproj
-rock-paper-scissors.vcxproj.filters
-rock-paper-scissors.vcxproj.user
-rock-paper-scissors.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+
+# Other
+test.txt
