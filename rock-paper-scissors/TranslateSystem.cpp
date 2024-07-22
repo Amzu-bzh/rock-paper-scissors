@@ -47,4 +47,8 @@ void TranslateSystem::parseFiles(std::string language)
 	p_menu->text = general["menu"];
 	p_game->text = general["game"];
 	p_settings->text = general["settings"];
+
+	p_menu->text["title"] = general["title"];
+	p_game->text["title"] = general["title"];
+	p_settings->text["title"] = general["title"];
 }

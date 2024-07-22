@@ -1,13 +1,12 @@
 {
+    "title": "      Pierre Papier Ciseaux\n     -----------------------\n",
     "menu": {
-        "title": "      Pierre Papier Ciseaux\n     -----------------------\n",
         "main": "1. Jouer\n2. Regles\n3. Parametres\n4. Quitter\nQuel est votre choix ? ",
         "rules1": "Chaque tour, vous choisissez un objet (une pierre, un papier ou un ciseaux).\nVotre adversaire en choisit aussi un.\n",
         "rules2": "Chaque objet bat un autre objet et est battu par un autre.\nSi vous avez le meme objet, il y a egalite\nLa pierre ecrase les ciseaux.\nLe papier enrobe la pierre.\nEt les ciseaux coupent le papier.\n",
         "rules3": "Le premier a remporter trois tours gagne la partie.\n"
     },
     "game": {
-        "title": "      Pierre Papier Ciseaux\n     -----------------------\n",
         "you_score": "Vous  : ",
         "bot_score": "Robot : ",
         "choice": "1. Pierre\n2. Papier\n3. Ciseaux\nQuel est votre choix ? ",
@@ -18,7 +17,6 @@
         "lose_game": "Vous avez perdu la partie."
     },
     "settings": {
-        "title": "      Pierre Papier Ciseaux\n     -----------------------\n",
         "main": "1. Langue\n2. Quitter\nQue voulez-vous faire ? ",
         "language": "1. Anglais\n2. Francais\nChoisissez une langue : "
     }
