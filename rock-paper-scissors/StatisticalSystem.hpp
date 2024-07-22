@@ -1,3 +1,7 @@
+/// \file		StatisticalSystem.hpp
+/// \author		@Amzu-bzh
+/// \project	rock-paper-scissors
+
 #ifndef statistical_system_hpp
 #define statistical_system_hpp
 

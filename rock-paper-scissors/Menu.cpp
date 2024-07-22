@@ -40,5 +40,7 @@ void Menu::rulesScreen()
 	std::cout << text["rules2"].asString() << std::endl;
 	std::cout << text["rules3"].asString() << std::endl;
 
-	system("pause");
+	std::cout << text["pause"].asString();
+	std::cin.ignore();
+	std::cin.get();
 }

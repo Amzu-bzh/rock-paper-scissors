@@ -44,10 +44,10 @@ void Game::runGame()
 		std::cout << text["lose_game"].asString() << std::endl;
 	}
 
-	std::cout << "test1";
 	p_stat->update(stat);
 
-	system("pause");
+	std::cout << text["pause"].asString();
+	std::cin.get();
 }
 
 void Game::gameLoop(int score[])
@@ -70,7 +70,9 @@ void Game::gameLoop(int score[])
 
 		analyzeResult(answer, choice, score);
 
-		system("pause");
+		std::cout << text["pause"].asString();
+		std::cin.ignore();
+		std::cin.get();
 	}
 }
 

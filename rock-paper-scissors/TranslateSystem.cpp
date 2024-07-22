@@ -52,7 +52,10 @@ void TranslateSystem::parseFiles(std::string language)
 	p_stat->text = general["stat"];
 
 	p_menu->text["title"] = general["title"];
+	p_menu->text["pause"] = general["pause"];
 	p_game->text["title"] = general["title"];
+	p_game->text["pause"] = general["pause"];
 	p_settings->text["title"] = general["title"];
 	p_stat->text["title"] = general["title"];
+	p_stat->text["pause"] = general["pause"];
 }

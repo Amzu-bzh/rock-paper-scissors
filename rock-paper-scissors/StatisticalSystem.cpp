@@ -1,3 +1,7 @@
+/// \file		StatisticalSystem.cpp
+/// \author		@Amzu-bzh
+/// \project	rock-paper-scissors
+
 #include "StatisticalSystem.hpp"
 
 StatisticalSystem::StatisticalSystem()
@@ -30,7 +34,9 @@ void StatisticalSystem::mainScreen()
 	std::cout << text["tie"].asString() << stat["round_tie_number"].asString() << std::endl;
 	std::cout << text["lose"].asString() << stat["round_lose_number"].asString() << std::endl;
 
-	system("pause");
+	std::cout << text["pause"].asString();
+	std::cin.ignore();
+	std::cin.get();
 }
 
 void StatisticalSystem::loadStats()
@@ -47,7 +53,6 @@ void StatisticalSystem::update(std::vector<int> lastGameStat)
 {
 	loadStats();
 
-	std::vector<int> totalStats = { 0, 0, 0, 0, 0 };
 	stat["game_win_number"] = stat["game_win_number"].asInt() + lastGameStat[0];
 	stat["game_lose_number"] = stat["game_lose_number"].asInt() + lastGameStat[1];
 	stat["round_win_number"] = stat["round_win_number"].asInt() + lastGameStat[2];
