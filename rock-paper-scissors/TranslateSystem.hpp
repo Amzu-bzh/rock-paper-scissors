@@ -2,8 +2,8 @@
 /// \author		@Amzu-bzh
 /// \project	rock-paper-scissors
 
-#ifndef display_hpp
-#define display_hpp
+#ifndef statistic_system_hpp
+#define statistic_system_hpp
 
 #include <iostream>
 
@@ -13,11 +13,12 @@
 #include "Menu.hpp"
 #include "Game.hpp"
 #include "Settings.hpp"
+#include "StatisticalSystem.hpp"
 
 class TranslateSystem
 {
 public:
-	TranslateSystem(Menu *menu, Game *game, Settings *settings);
+	TranslateSystem(Menu *menu, Game *game, Settings *settings, StatisticalSystem *statisticalSystem);
 	~TranslateSystem();
 
 	Json::Value general;
@@ -37,6 +38,7 @@ private:
 	Menu* p_menu;
 	Game* p_game;
 	Settings* p_settings;
+	StatisticalSystem* p_stat;
 };
 
-#endif // !display_hpp
+#endif /* statistic_system_hpp */

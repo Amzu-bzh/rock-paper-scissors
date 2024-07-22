@@ -4,8 +4,10 @@
 
 #include "Game.hpp"
 
-Game::Game()
+Game::Game(StatisticalSystem *statisticalSystem)
 {
+	p_stat = statisticalSystem;
+	stat.reserve(5);
 	// std::cout << "Construction of the Game: " << this << std::endl;
 	// system("pause");
 }
@@ -18,6 +20,7 @@ Game::~Game()
 
 void Game::runGame()
 {
+	std::fill(stat.begin(), stat.end(), 0);
 	int score[2];
 	score[0] = 0;
 	score[1] = 0;
@@ -32,12 +35,17 @@ void Game::runGame()
 
 	if (score[0] == 3)
 	{
+		stat[0] += 1;
 		std::cout << text["win_game"].asString() << std::endl;
 	}
 	else
 	{
+		stat[1] += 1;
 		std::cout << text["lose_game"].asString() << std::endl;
 	}
+
+	std::cout << "test1";
+	p_stat->update(stat);
 
 	system("pause");
 }
@@ -99,14 +107,17 @@ int Game::compare(int lose, int win, int answer)
 {
 	if (answer == win)
 	{
+		stat[2] += 1;
 		return 1;
 	}
 	else if (answer == lose)
 	{
+		stat[4] += 1;
 		return 2;
 	}
 	else
 	{
+		stat[3] += 1;
 		return 3;
 	}
 }

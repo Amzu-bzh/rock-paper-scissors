@@ -9,10 +9,12 @@
 
 #include <json/json.h>
 
+#include "StatisticalSystem.hpp"
+
 class Game
 {
 public :
-	Game();
+	Game(StatisticalSystem *statisticalSystem);
 	~Game();
 
 	void runGame();
@@ -30,6 +32,9 @@ private :
 	int generateNumber();
 
 	void displayScore(int score[]);
+
+	StatisticalSystem* p_stat;
+	std::vector<int> stat = { 0, 0, 0, 0, 0 };
 };
 
 #endif /* game_h */
