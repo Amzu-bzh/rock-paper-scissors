@@ -1,5 +1,6 @@
 {
     "title": "      Pierre Papier Ciseaux\n     -----------------------\n",
+    "pause": "Appuyez sur entrer pour continuer...",
     "menu": {
         "main": "1. Jouer\n2. Regles\n3. Statistiques\n4. Parametres\n5. Quitter\nQuel est votre choix ? ",
         "rules1": "Chaque tour, vous choisissez un objet (une pierre, un papier ou un ciseaux).\nVotre adversaire en choisit aussi un.\n",
