@@ -1,4 +1,4 @@
-/// \file		Display.cpp
+/// \file		TranslateSystem.cpp
 /// \author		@Amzu-bzh
 /// \project	rock-paper-scissors
 

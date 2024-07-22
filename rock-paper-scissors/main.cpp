@@ -20,7 +20,7 @@ int main()
 	Menu menu;
 	Game game;
 	Settings settings;
-	TranslateSystem display(&menu, &game, &settings);
+	TranslateSystem translateSystem(&menu, &game, &settings);
 
 	while (play)
 	{
@@ -37,7 +37,7 @@ int main()
 		case 3:
 			settings.mainScreen();
 
-			display.changeLanguage();
+			translateSystem.changeLanguage();
 
 			break;
 

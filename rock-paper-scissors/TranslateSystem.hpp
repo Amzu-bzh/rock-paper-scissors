@@ -1,4 +1,4 @@
-/// \file		Dsiplay.hpp
+/// \file		TranslateSystem.hpp
 /// \author		@Amzu-bzh
 /// \project	rock-paper-scissors
 
