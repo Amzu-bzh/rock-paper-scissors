@@ -11,12 +11,12 @@ The purpose of this system is to allow the user to easily change the language of
 - [X] Display the information
 - [X] Save the language used
 
-## Statistic system
+## Statistical system
 This system will provide information on the games played by the user, such as his winning percentage.
 
-- [ ] Get the information
-- [ ] Save the informations in a `.json` file
-- [ ] Display this informations in a menu
+- [X] Get the information
+- [X] Save the informations in a `.json` file
+- [X] Display this informations in a menu
 
 
 ## Informations
