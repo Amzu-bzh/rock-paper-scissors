@@ -35,6 +35,8 @@
 /.vs
 /x64
 /rock-paper-scissors/x64
+/release
+/rock-paper-scissors/release
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
