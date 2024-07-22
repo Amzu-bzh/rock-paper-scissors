@@ -5,7 +5,7 @@ This is my own version with :
 
 - GUI
 - Translate system
-- Statistic system
+- Statistical system
 
 ## Dependencies
 [jsoncpp](https://github.com/open-source-parsers/jsoncpp)
