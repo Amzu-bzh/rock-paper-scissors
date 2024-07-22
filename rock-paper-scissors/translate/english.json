@@ -1,7 +1,7 @@
 {
     "title": "      Rock Paper Scissors\n     ---------------------\n",
     "menu": {
-        "main": "1. Play\n2. Rules\n3. Settings\n4. Exit\nWhat's your choice? ",
+        "main": "1. Play\n2. Rules\n3. Statistics\n4. Settings\n5. Exit\nnWhat's your choice? ",
         "rules1": "Every turn, you choose an object (a rock, a paper or scissors).\nYour opponent also choose one.\n",
         "rules2": "Each object beats an object and is beaten by another.\nIf you have the same object, there is a tie.\nStone crushes scissors.\nPaper wraps stone.\nAnd scissors cut paper.\n",
         "rules3": "The first to win three rounds wins the game.\n"
@@ -19,5 +19,13 @@
     "settings": {
         "main": "1. Language\n2. Exit\nWhat do you want to do? ",
         "language": "1. English\n2. French\nChoose a language : "
+    },
+    "stat": {
+        "intro": "Your statistics :",
+        "game": "Game:",
+        "round": "Round:",
+        "win": " - win: ",
+        "lose": " - lose: ",
+        "tie": " - tie: "
     }
 }
